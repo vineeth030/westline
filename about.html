@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Westine Creative</title>
+  <meta name="description" content="Westine Creative is a design agency focused on helping businesses communicate clearly, build memorable brands, and grow through strategic design." />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ivory: '#f7f4ee',
+            paper: '#fbf9f5',
+            ink: '#1f1d1a',
+            stone: '#6b665d',
+            clay: '#b07d56',
+            'clay-dark': '#8f6543',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    .tracking-luxe { letter-spacing: 0.28em; }
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      height: 1px;
+      width: 0;
+      background-color: #b07d56;
+      transition: width 0.35s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .nav-link.active::after { width: 100%; }
+  </style>
+</head>
+
+<body class="bg-ivory text-ink font-sans antialiased selection:bg-clay/20">
+  <div class="relative flex min-h-screen flex-col overflow-hidden">
+
+    <!-- Decorative geometry -->
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
+      <div class="absolute -top-32 left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-gradient-to-b from-clay/12 to-transparent blur-2xl"></div>
+      <svg class="absolute left-12 top-1/2 hidden h-32 w-32 -translate-y-1/2 text-clay/25 lg:block" viewBox="0 0 100 100" fill="none">
+        <rect x="10" y="10" width="80" height="80" stroke="currentColor" stroke-width="0.6" />
+        <rect x="28" y="28" width="44" height="44" stroke="currentColor" stroke-width="0.6" />
+      </svg>
+      <div class="absolute right-16 top-24 hidden h-40 w-px bg-gradient-to-b from-transparent via-ink/15 to-transparent lg:block"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="relative z-20">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 lg:px-10">
+        <a href="index.html" class="flex items-baseline gap-2">
+          <span class="font-serif text-xl font-medium tracking-tight text-ink">Westine</span>
+          <span class="text-xs font-medium uppercase tracking-luxe text-clay">Creative</span>
+        </a>
+        <div class="flex items-center gap-8 text-sm font-medium text-stone">
+          <a href="index.html" class="nav-link transition-colors hover:text-ink">Home</a>
+          <a href="about.html" class="nav-link active text-ink transition-colors hover:text-ink">About</a>
+          <a href="contact.html" class="nav-link transition-colors hover:text-ink">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="relative z-10 flex flex-1 items-center px-6 py-10 lg:px-10">
+      <div class="mx-auto w-full max-w-2xl text-center">
+        <p class="mb-6 text-xs font-medium uppercase tracking-luxe text-clay">Our Studio</p>
+        <h1 class="font-serif text-4xl font-light leading-tight text-ink sm:text-5xl lg:text-6xl">
+          About <span class="italic text-clay">Westine Creative</span>
+        </h1>
+
+        <div class="mx-auto mt-8 h-px w-16 bg-clay/50"></div>
+
+        <p class="mt-8 text-lg font-light leading-relaxed text-stone sm:text-xl">
+          Westine Creative is a design agency focused on helping businesses
+          communicate clearly, build memorable brands, and create meaningful
+          connections with their audiences.
+        </p>
+        <p class="mt-6 text-lg font-light leading-relaxed text-stone sm:text-xl">
+          We believe that good design is not just about aesthetics — it is a
+          strategic tool for growth.
+        </p>
+
+        <div class="mt-12">
+          <a href="contact.html"
+             class="group inline-flex items-center gap-2 rounded-full bg-ink px-7 py-3.5 text-sm font-medium text-paper transition-all duration-300 hover:bg-clay-dark hover:shadow-lg hover:shadow-clay/20">
+            Work With Us
+            <span class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 px-6 pb-6 lg:px-10">
+      <div class="mx-auto flex max-w-6xl items-center justify-between text-xs text-stone">
+        <span>&copy; 2026 Westine Creative</span>
+        <span class="hidden sm:block">Design that means business.</span>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Westine Creative — Design Solutions That Help Businesses Grow</title>
+  <meta name="description" content="Westine Creative is a boutique design agency helping businesses grow through strategic branding, marketing design, and creative consulting." />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ivory: '#f7f4ee',
+            paper: '#fbf9f5',
+            ink: '#1f1d1a',
+            stone: '#6b665d',
+            clay: '#b07d56',
+            'clay-dark': '#8f6543',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .tracking-luxe { letter-spacing: 0.28em; }
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      height: 1px;
+      width: 0;
+      background-color: #b07d56;
+      transition: width 0.35s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .nav-link.active::after { width: 100%; }
+  </style>
+</head>
+
+<body class="bg-ivory text-ink font-sans antialiased selection:bg-clay/20">
+  <div class="relative flex min-h-screen flex-col overflow-hidden">
+
+    <!-- Decorative geometry -->
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
+      <div class="absolute -top-40 -right-40 h-[34rem] w-[34rem] rounded-full bg-gradient-to-br from-clay/15 to-transparent blur-2xl"></div>
+      <div class="absolute -bottom-48 -left-32 h-[30rem] w-[30rem] rounded-full bg-gradient-to-tr from-stone/10 to-transparent blur-2xl"></div>
+      <svg class="absolute right-10 top-1/3 hidden h-40 w-40 text-clay/30 lg:block" viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="49" stroke="currentColor" stroke-width="0.6" />
+        <circle cx="50" cy="50" r="32" stroke="currentColor" stroke-width="0.6" />
+      </svg>
+      <div class="absolute bottom-16 right-1/4 hidden h-px w-48 rotate-45 bg-gradient-to-r from-transparent via-ink/15 to-transparent lg:block"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="relative z-20">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 lg:px-10">
+        <a href="index.html" class="flex items-baseline gap-2">
+          <span class="font-serif text-xl font-medium tracking-tight text-ink">Westine</span>
+          <span class="text-xs font-medium uppercase tracking-luxe text-clay">Creative</span>
+        </a>
+        <div class="flex items-center gap-8 text-sm font-medium text-stone">
+          <a href="index.html" class="nav-link active text-ink transition-colors hover:text-ink">Home</a>
+          <a href="about.html" class="nav-link transition-colors hover:text-ink">About</a>
+          <a href="contact.html" class="nav-link transition-colors hover:text-ink">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="relative z-10 flex flex-1 items-center px-6 py-10 lg:px-10">
+      <div class="mx-auto w-full max-w-6xl">
+        <div class="grid items-center gap-12 lg:grid-cols-12">
+
+          <!-- Hero copy -->
+          <div class="lg:col-span-7">
+            <p class="mb-5 text-xs font-medium uppercase tracking-luxe text-clay">Strategic Design Studio</p>
+            <h1 class="font-serif text-4xl font-light leading-[1.05] text-ink sm:text-5xl lg:text-6xl">
+              Design Solutions<br />That Help<br /><span class="italic text-clay">Businesses Grow</span>
+            </h1>
+            <p class="mt-7 max-w-xl text-base leading-relaxed text-stone">
+              Westine Creative partners with businesses to create meaningful brands,
+              impactful marketing materials, and memorable customer experiences —
+              all through thoughtful, intentional design.
+            </p>
+
+            <div class="mt-9 flex flex-wrap items-center gap-4">
+              <a href="contact.html"
+                 class="group inline-flex items-center gap-2 rounded-full bg-ink px-7 py-3.5 text-sm font-medium text-paper transition-all duration-300 hover:bg-clay-dark hover:shadow-lg hover:shadow-clay/20">
+                Let's Work Together
+                <span class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+              </a>
+              <a href="about.html"
+                 class="inline-flex items-center gap-2 rounded-full border border-ink/20 px-7 py-3.5 text-sm font-medium text-ink transition-all duration-300 hover:border-clay hover:text-clay">
+                Learn More
+              </a>
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div class="lg:col-span-5">
+            <p class="mb-5 text-xs font-medium uppercase tracking-luxe text-stone">What We Do</p>
+            <div class="space-y-px overflow-hidden rounded-2xl border border-ink/10 bg-paper/60 backdrop-blur-sm">
+              <a href="contact.html" class="group flex items-center justify-between px-6 py-4 transition-colors duration-300 hover:bg-ivory">
+                <span class="font-serif text-lg text-ink">Branding</span>
+                <span class="text-xs text-stone transition-colors group-hover:text-clay">Visual Identity</span>
+              </a>
+              <div class="h-px bg-ink/5"></div>
+              <a href="contact.html" class="group flex items-center justify-between px-6 py-4 transition-colors duration-300 hover:bg-ivory">
+                <span class="font-serif text-lg text-ink">Social Media Marketing</span>
+                <span class="text-xs text-stone transition-colors group-hover:text-clay">Campaigns</span>
+              </a>
+              <div class="h-px bg-ink/5"></div>
+              <a href="contact.html" class="group flex items-center justify-between px-6 py-4 transition-colors duration-300 hover:bg-ivory">
+                <span class="font-serif text-lg text-ink">Package Design</span>
+                <span class="text-xs text-stone transition-colors group-hover:text-clay">Products</span>
+              </a>
+              <div class="h-px bg-ink/5"></div>
+              <a href="contact.html" class="group flex items-center justify-between px-6 py-4 transition-colors duration-300 hover:bg-ivory">
+                <span class="font-serif text-lg text-ink">Marketing Materials</span>
+                <span class="text-xs text-stone transition-colors group-hover:text-clay">Collateral</span>
+              </a>
+              <div class="h-px bg-ink/5"></div>
+              <a href="contact.html" class="group flex items-center justify-between px-6 py-4 transition-colors duration-300 hover:bg-ivory">
+                <span class="font-serif text-lg text-ink">Creative Strategy</span>
+                <span class="text-xs text-stone transition-colors group-hover:text-clay">Consulting</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 px-6 pb-6 lg:px-10">
+      <div class="mx-auto flex max-w-6xl items-center justify-between text-xs text-stone">
+        <span>&copy; 2026 Westine Creative</span>
+        <span class="hidden sm:block">Design that means business.</span>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
